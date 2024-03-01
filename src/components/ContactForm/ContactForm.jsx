@@ -31,13 +31,13 @@ const ContactForm = ({handleUpdate}) => {
               <div className={css.inputWrapper}>
                   <label htmlFor={usernameId}>Name</label>
                   <Field className={css.contactInput} type="text" name="username" id={usernameId} placeholder="Enter name"></Field>
-                  <ErrorMessage name="username" as="span" className={css.contactError}></ErrorMessage>
+                  <ErrorMessage name="username" component="span" className={css.contactError}></ErrorMessage>
 
               </div>
                <div className={css.inputWrapper}>
                   <label htmlFor={numberId}>Number</label>
                   <Field className={css.contactInput} type="text" name="number" id={numberId} placeholder="Enter number"></Field>
-                  <ErrorMessage   name="number" as="span" className={css.contactError}></ErrorMessage>
+                  <ErrorMessage   name="number" component="span" className={css.contactError}></ErrorMessage>
               </div>
               <button className={css.submitBtn} type="submit">Add Contact</button>
           </Form>

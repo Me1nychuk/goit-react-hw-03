@@ -7,9 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 300px;
+  width: 25%;
   margin: 0 auto;
   align-items: start;
+  position: relative;
 }
 .contactInput {
   width: 100%;
@@ -17,6 +18,9 @@
 }
 .contactError {
   color: red;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
 }
 .submitBtn {
   width: 300px;
