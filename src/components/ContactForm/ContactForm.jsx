@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import PropTypes from 'prop-types';
 import { useId } from "react";
 import * as Yup from 'yup';
 import css from "./ContactForm.module.css"
@@ -45,4 +46,7 @@ const ContactForm = ({handleUpdate}) => {
   )
 }
 
+ContactForm.PropTypes = {
+    handleUpdate: PropTypes.func.isRequired,
+}
 export default ContactForm

@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import { FaUser, FaPhone } from "react-icons/fa";
 import css from "./Contact.module.css"
 
@@ -16,4 +16,10 @@ const Contact = ({id,username,number, handleDelete}) => {
   )
 }
 
+Contact.PropTypes = {
+  id: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  handleDelete: PropTypes.func.isRequired,
+}
 export default Contact

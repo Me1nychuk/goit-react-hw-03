@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types';
 import './App.css'
 import ContactForm from './ContactForm/ContactForm'
 import ContactList from './ContactList/ContactList'
@@ -65,4 +66,13 @@ function App() {
   )
 }
 
+App.PropTypes = {
+  contactsArr: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+   )
+ }
 export default App
