@@ -1,17 +1,23 @@
 import Contact from "./Contact/Contact";
-import css from "./ContactList.module.css"
-import PropTypes from 'prop-types';
+import css from "./ContactList.module.css";
+import PropTypes from "prop-types";
 
-const ContactList = ({contacts, handleDelete}) => {
+const ContactList = ({ contacts, handleDelete }) => {
   return (
     <div className={css.wrapper}>
       {contacts.map(({ name, number, id }) => (
-        <Contact key={id} id={id} username={name} number={number} handleDelete={handleDelete} />
+        <Contact
+          key={id}
+          id={id}
+          username={name}
+          number={number}
+          handleDelete={handleDelete}
+        />
       ))}
     </div>
   );
-}
-ContactList.PropTypes = {
+};
+ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -20,5 +26,5 @@ ContactList.PropTypes = {
     })
   ).isRequired,
   handleDelete: PropTypes.func.isRequired,
-}
-export default ContactList
+};
+export default ContactList;
